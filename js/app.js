@@ -76,18 +76,20 @@ Player.prototype.render = function(x, y) {
 
 Player.prototype.handleInput = function(direction) {
     if (direction === "up") {
-        this.y = this.y - 90;
+        this.y = this.y - 83;
     } else if (direction === "down") {
-        this.y = this.y + 90;
+        this.y = this.y + 83;
     } else if (direction === "left") {
-        this.x = this.x - 100;
+        this.x = this.x - 101;
     } else if (direction === "right") {
-        this.x = this.x + 100;
+        this.x = this.x + 101;
     }
 };
 
 Player.prototype.checkCollisions = function() {
-    for (let i = 0; i < allEnemies.length; i++) {
+    for (let i = 0, len = allEnemies.length; i < len; i++) { 
+        /**  e.g. var i = 0, len = <object/array>.length */
+        /** Statements */
         if (this.x < allEnemies[i].x + allEnemies[i].width &&
             this.x + this.width > allEnemies[i].x &&
             this.y < allEnemies[i].y + allEnemies[i].height &&
@@ -98,8 +100,21 @@ Player.prototype.checkCollisions = function() {
             if (this.lives === 0){
                 LoseGame();
             }
-            this.reset();
-        }
+        this.reset();  
+    }
+    // for (let i = 0; i < allEnemies.length; i++) {
+    //     if (this.x < allEnemies[i].x + allEnemies[i].width &&
+    //         this.x + this.width > allEnemies[i].x &&
+    //         this.y < allEnemies[i].y + allEnemies[i].height &&
+    //         this.height + this.y > allEnemies[i].y) {
+    //         console.log("collision detected");
+    //         this.lives --;
+    //         document.getElementsByClassName('lives')[0].innerHTML = this.lives;
+    //         if (this.lives === 0){
+    //             LoseGame();
+    //         }
+    //         this.reset();
+    //     }
     }
 };
 
