@@ -1,3 +1,5 @@
+https://mlama007.github.io/ArcadeGame/
+
 #Arcade Game
 This is a simple arcade game where you have to move your character across the water to your score.
 Open the index.html file. 
