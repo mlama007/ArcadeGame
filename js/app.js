@@ -9,7 +9,7 @@ let Enemy = function(x, y, speed) {
     this.speed = speed;
     //size
     this.width = 70;
-    this.height = 50;
+    this.height = 40;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -42,7 +42,7 @@ let Player = function(x, y) {
     this.y = y;
     this.sprite = 'images/char-horn-girl.png';
     this.width = 75;
-    this.height = 75;
+    this.height = 40;
     this.score = 0;
     this.lives = 3;
 };
